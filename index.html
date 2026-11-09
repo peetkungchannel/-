@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ขอเพลงกันเถอะ — หน้าคิวเพลง</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <div class="mascot">🐱🎧</div>
+    <div class="hero-copy">
+      <p class="eyebrow">MUSIC REQUEST</p>
+      <h1>ขอเพลงกันเถอะ</h1>
+      <p>เพลงดีๆ ที่ใช่... แค่คุณขอ 💙</p>
+    </div>
+    <div class="mascot">🐻🎧</div>
+  </header>
+
+  <nav class="nav">
+    <a class="active" href="index.html">♫ หน้าคิวเพลง</a>
+    <a href="admin.html">⚙ ระบบแอดมิน</a>
+  </nav>
+
+  <main class="two-column">
+    <section class="panel">
+      <div class="panel-title">
+        <h2>🎵 คิวเพลงที่ขอไว้</h2>
+        <span class="count" id="requestCount">0 รายการ</span>
+      </div>
+      <div id="queueList" class="queue-list"></div>
+      <div id="emptyState" class="empty-state">
+        <div class="empty-icon">🎶</div>
+        <h3>ยังไม่มีเพลงในคิว</h3>
+        <p>คิวเพลงว่างอยู่ตอนนี้ ขอเพลงแรกได้เลย!</p>
+      </div>
+    </section>
+
+    <section class="panel request-panel">
+      <div class="request-heading">
+        <div class="music-note">♫</div>
+        <h2>ขอเพลง</h2>
+        <p>พิมพ์ชื่อเพลงและศิลปินที่คุณต้องการ</p>
+      </div>
+      <form id="requestForm">
+        <label class="field"><span>♙</span><input id="userInput" required maxlength="60" placeholder="ชื่อผู้ใช้"></label>
+        <label class="field"><span>♫</span><input id="songInput" required maxlength="100" placeholder="ชื่อเพลง"></label>
+        <label class="field"><span>♙</span><input id="artistInput" required maxlength="100" placeholder="ศิลปิน"></label>
+        <button class="submit-btn" type="submit">➤ ส่งคำขอ</button>
+      </form>
+      <div class="cat-art">🐱 <span>💗</span></div>
+      <p class="small-note">ขอเพลงที่ชอบ แล้วรอฟังไปด้วยกันนะ</p>
+      <p id="notice" class="notice" role="status"></p>
+    </section>
+  </main>
+
+  <footer>💙 ขอเพลงกันเถอะ — ฟังเพลงดีๆ ไปด้วยกันนะ 💙</footer>
+  <script src="queue.js"></script>
+</body>
+</html>
